@@ -130,5 +130,10 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 
 df = fj_load_df_from_csv(in_dir, in_data)
+
+# uncomment to run basic logistic regression model
+# df = fj_preprocess1(df)
+# fj_logistic(df)
+
 df1, df2 = fj_split(df, 0.02)
 fj_save(out_dir, small_data, df2)

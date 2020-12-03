@@ -1,6 +1,7 @@
 12/2/2020
 1. A neural network model that uses a basic count vectorizer and an FCNN with fj_small.csv also returns poor results
    Accuracy score: 0.9444444444444444 F1 score: 0.0
+2. It is unclear if the poor results are due to the smallness of the dataset, the vectorizer (and parameters passed to it), the lack of other text processing (lemmzatization, stemming) or something else
 
 12/1/2020
 1. Very basic logistic regression model that does not use an natural language processing returns poor results on the full data set

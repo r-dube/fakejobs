@@ -1,6 +1,22 @@
 12/3/2020
-1. Attempting to use the count vectorizer with Google colab (free version) crashed the colab instance. Colab reports that the crash was due to all available RAM being used up. 
+1. Attempting to use the count vectorizer (cv) with Google colab (free version) and the full copy of the data crashed the colab instance. Colab reports that the crash was due to all available RAM being used up. 
 2. Create a medium (20%) version of the data in an attempt to continue using the existing free setup on Colab.
+3. With medium version of the data and the fcnn model
+   Epoch 5/5
+   95/95 [==============================] - 3s 30ms/step - loss: 2.9882e-04 - accuracy: 1.0000
+   Accuracy score: 0.9870 F1 score: 0.8372
+4. The full data set works on colab if count vectorizer is forced to use 8-bit integers
+   Epoch 5/5
+   475/475 [==============================] - 36s 75ms/step - loss: 0.0037 - accuracy: 0.9994
+   Accuracy score: 0.9855 F1 score: 0.8561
+5. On simplifying the fcnn from four hidden layers to two (input -> 100 -> 10 -> output)
+   Epoch 5/5
+   475/475 [==============================] - 35s 73ms/step - loss: 0.0025 - accuracy: 0.9995
+   Accuracy score: 0.9881 F1 score: 0.8769
+6. Use droput at each of the two hidden layers
+   Epoch 5/5
+   475/475 [==============================] - 34s 71ms/step - loss: 0.0015 - accuracy: 0.9997 - false_positives_10: 2.0000 - false_negatives_9: 2.0000
+   Accuracy score: 0.9888 F1 score: 0.8864
 
 12/2/2020
 1. A neural network model that uses a basic count vectorizer and an FCNN with fj_small.csv also returns poor results

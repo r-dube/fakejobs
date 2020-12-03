@@ -19,6 +19,7 @@ in_dir = '/Users/rdube/Repos/fakejobs/data/'
 in_data = 'fake_job_postings.csv'
 out_dir = '/Users/rdube/Repos/fakejobs/data/'
 small_data  ='fj_small.csv'
+medium_data  ='fj_medium.csv'
 
 def fj_label_stats(df):
     """
@@ -135,5 +136,5 @@ df = fj_load_df_from_csv(in_dir, in_data)
 # df = fj_preprocess1(df)
 # fj_logistic(df)
 
-df1, df2 = fj_split(df, 0.02)
-fj_save(out_dir, small_data, df2)
+df1, df2 = fj_split(df, 0.20)
+fj_save(out_dir, medium_data, df2)

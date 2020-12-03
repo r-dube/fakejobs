@@ -1,3 +1,7 @@
+12/3/2020
+1. Attempting to use the count vectorizer with Google colab (free version) crashed the colab instance. Colab reports that the crash was due to all available RAM being used up. 
+2. Create a medium (20%) version of the data in an attempt to continue using the existing free setup on Colab.
+
 12/2/2020
 1. A neural network model that uses a basic count vectorizer and an FCNN with fj_small.csv also returns poor results
    Accuracy score: 0.9444444444444444 F1 score: 0.0

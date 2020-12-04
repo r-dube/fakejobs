@@ -1,2 +1,2 @@
-### Read the documentation for this project in the blog
-TBD
+### Read the blog
+Documentation on the Fake Jobs Detection project is at https://r-dube.github.io/fakejobs/

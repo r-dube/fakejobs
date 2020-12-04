@@ -1,0 +1,23 @@
+title: Detecting Fake Jobs
+
+description: Data Science to detect fraudulent job postings
+
+show_excerpts: true 
+
+# For the footer of blog pages
+github_username: r-dube
+rss: rss
+
+# for rss
+url: https://r-dube.github.io
+
+# For comments on posts
+disqus:
+    shortname: fakejobs
+
+# Github pages Jekyll theme
+theme: minima
+
+# For the RSS button and feed.xml
+plugins:
+ - jekyll-feed

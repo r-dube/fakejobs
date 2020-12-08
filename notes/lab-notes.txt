@@ -1,3 +1,36 @@
+12/7/2020
+1. LTSM network, medium dataset, max_length = 250, embedding_dim = 32, LSTM nodes = 64, dropout = 0.1, learning_rate = 0.0005
+   Epoch 5/5
+   95/95 [==============================] - 16s 168ms/step - loss: 0.1981 - accuracy: 0.9483 - false_positives: 0.0000e+00 - false_negatives: 157.0000
+   Accuracy score: 0.9553 F1 score: 0.0000
+2. With full dataset and same network and parameters as above:
+   Epoch 5/5
+   475/475 [==============================] - 97s 204ms/step - loss: 0.1212 - accuracy: 0.9647 - false_positives: 66.0000 - false_negatives: 471.0000
+   Accuracy score: 0.9556 F1 score: 0.3425
+   So even with the default network that we started with, some learning is happening if enough data is provided
+3. Turning the network into "bidirectional" with 32 nodes and going back to the medium dataset improves performance significantly; lr = 0.01, dropout removed, retrun_sequences=True
+   Epoch 5/5
+   95/95 [==============================] - 16s 169ms/step - loss: 8.4216e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9832 F1 score: 0.7805
+4. With 16 nodes inside bidirection(lstm)
+   Epoch 5/5
+   95/95 [==============================] - 15s 153ms/step - loss: 6.1672e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9888 F1 score: 0.8571
+5. Results remain unchanged even if dropout=0.1 inside LSTM
+6. Running with the above setup on the full data set
+   Epoch 5/5
+   475/475 [==============================] - 95s 199ms/step - loss: 2.3415e-04 - accuracy: 0.9999 - false_positives: 1.0000 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9866 F1 score: 0.8615
+7. Setting embedding_dim = lstm units = 16, medium dataset
+   Epoch 5/5
+   95/95 [==============================] - 13s 132ms/step - loss: 0.0018 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9870 F1 score: 0.8293
+8. Renamed embedding_dim as hidden_size(16); the embedding output is 2*hidden_size and the LSTM layers take just hidden_size; confirm results on medium dataset
+   Epoch 5/5
+   95/95 [==============================] - 15s 156ms/step - loss: 6.4386e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9888 F1 score: 0.8571
+
+
 12/5/2020
 1. Finalized classifier on medium data set
    Epoch 5/5

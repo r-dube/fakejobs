@@ -29,6 +29,11 @@
    Epoch 5/5
    95/95 [==============================] - 15s 156ms/step - loss: 6.4386e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
    Accuracy score: 0.9888 F1 score: 0.8571
+9. Adding recurrent_dropout makes no difference
+10.Increased hidden_size from 16 to 32
+   Epoch 5/5
+   95/95 [==============================] - 48s 510ms/step - loss: 5.2571e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9907 F1 score: 0.8837
 
 
 12/5/2020

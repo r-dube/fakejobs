@@ -20,5 +20,5 @@ We experiment with various embedding dimension sizes (8, 16, 32) and various uni
 
 ### References
 [^colab1]: [Bag-of-words with a fully-connected neural network model](https://github.com/r-dube/fakejobs/blob/main/fj_fcnn.ipynb)
-[^colab3]: [LSTM model with an embedding layer](https://github.com/r-dube/fakejobs/blob/main/fj_ltsm.ipynb)
+[^colab3]: [LSTM model with an embedding layer](https://github.com/r-dube/fakejobs/blob/main/fj_lstm.ipynb)
 [^data1]: [Github copy of dataset from Kaggle](https://github.com/r-dube/fakejobs/blob/main/data/fake_job_postings.csv)

@@ -1,3 +1,40 @@
+12/8/2020
+1. Full dataset with hidden_size 32 (takes a long time to run)
+   Epoch 5/5
+   475/475 [==============================] - 258s 543ms/step - loss: 1.3497e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9873 F1 score: 0.8741
+2. On reducing the hidden_size to 16
+   Epoch 5/5
+   475/475 [==============================] - 176s 370ms/step - loss: 2.5393e-04 - accuracy: 0.9999 - false_positives: 1.0000 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9851 F1 score: 0.8413
+3. On reducing hidden_size to 8
+   Epoch 5/5
+   475/475 [==============================] - 146s 307ms/step - loss: 2.5624e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9840 F1 score: 0.8365
+4. On moving hidden_size to 32 but training for 3 epochs
+   Epoch 3/3
+   475/475 [==============================] - 260s 548ms/step - loss: 0.0036 - accuracy: 0.9991 - false_positives: 3.0000 - false_negatives: 11.0000
+   Accuracy score: 0.9877 F1 score: 0.8764
+5. Separating embedding_dim(16) and hidden_size (16)
+   Epoch 5/5
+   95/95 [==============================] - 30s 313ms/step - loss: 0.0022 - accuracy: 0.9997 - false_positives_7: 0.0000e+00 - false_negatives_7: 1.0000
+   Accuracy score: 0.9758 F1 score: 0.6486
+6. embed_dim = 16
+   hidden_size = 32
+   Epoch 5/5
+   95/95 [==============================] - 35s 371ms/step - loss: 0.0028 - accuracy: 0.9997 - false_positives_8: 0.0000e+00 - false_negatives_8: 1.0000
+   Accuracy score: 0.9851 F1 score: 0.8095
+7. embed_dim = 32
+   hidden_size = 16
+   Epoch 5/5
+   95/95 [==============================] - 32s 334ms/step - loss: 0.0012 - accuracy: 0.9997 - false_positives_9: 1.0000 - false_negatives_9: 0.0000e+00
+   Accuracy score: 0.9907 F1 score: 0.8837
+8. embed_dim = 32
+   hidden_size = 8
+   Epoch 5/5
+   95/95 [==============================] - 30s 314ms/step - loss: 7.1143e-04 - accuracy: 1.0000 - false_positives_10: 0.0000e+00 - false_negatives_10: 0.0000e+00
+   Accuracy score: 0.9907 F1 score: 0.8889
+
 12/7/2020
 1. LTSM network, medium dataset, max_length = 250, embedding_dim = 32, LSTM nodes = 64, dropout = 0.1, learning_rate = 0.0005
    Epoch 5/5

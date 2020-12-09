@@ -34,6 +34,16 @@
    Epoch 5/5
    95/95 [==============================] - 30s 314ms/step - loss: 7.1143e-04 - accuracy: 1.0000 - false_positives_10: 0.0000e+00 - false_negatives_10: 0.0000e+00
    Accuracy score: 0.9907 F1 score: 0.8889
+9. Full dataset with above parameters
+   Epoch 5/5
+   475/475 [==============================] - 169s 355ms/step - loss: 1.5170e-04 - accuracy: 1.0000 - false_positives_11: 0.0000e+00 - false_negatives_11: 0.0000e+00
+   Accuracy score: 0.9873 F1 score: 0.8692
+10. Full dataset
+   embed_dim = 32
+   hidden_size = 32
+   Epoch 5/5
+   475/475 [==============================] - 224s 472ms/step - loss: 8.5368e-05 - accuracy: 1.0000 - false_positives_12: 0.0000e+00 - false_negatives_12: 0.0000e+00
+   Accuracy score: 0.9884 F1 score: 0.8812
 
 12/7/2020
 1. LTSM network, medium dataset, max_length = 250, embedding_dim = 32, LSTM nodes = 64, dropout = 0.1, learning_rate = 0.0005

@@ -13,7 +13,14 @@
    Epoch 10/10
    95/95 [==============================] - 12s 128ms/step - loss: 0.0082 - accuracy: 0.9990
    Accuracy score: 0.9795 F1 score: 0.7556
-
+4. With cleaned up glove, embed_dim = 50, hidden_size = 32
+   Epoch 10/10
+   95/95 [==============================] - 13s 136ms/step - loss: 0.0028 - accuracy: 1.0000 - false_positives_1: 0.0000e+00 - false_negatives_1: 0.0000e+00
+   Accuracy score: 0.9814 F1 score: 0.7826
+5. Glove with full dataset
+   Epoch 10/10
+   475/475 [==============================] - 64s 134ms/step - loss: 0.0086 - accuracy: 0.9975 - false_positives_2: 13.0000 - false_negatives_2: 25.0000
+   Accuracy score: 0.9787 F1 score: 0.7912
 
 12/9/2020
 1. Full dataset with hidden_size 32 (takes a long time to run)

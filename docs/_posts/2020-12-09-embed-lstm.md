@@ -9,7 +9,7 @@ Since there are many unique words in the job postings, we replace the bag-of-wor
  
 The word-embedding layer is followed by a bidirectional layer that consists of two LSTM blocks. The first LSTM block takes a sequence of word-embeddings in the order in which the words appear in the job description. The second LSTM block takes input in the reverse order of words in the job description. The reverse order can help the classifier pick up information that is not accessible if the sequence is processed only in the forward direction (for example, when a word earlier in the sequence is related to a word later in the sequence). The two LSTM blocks do not interact. Each unit within each LSTM block produces an output, and the two sets of outputs (from the two blocks) are concatenated together. 
 
-A max-pooling layer takes the maximum output of each LSTM unit (in each block) across the entire job description (that is, across the time period during which the job description is fed to the classifier). This layer is fully connected to the output node.
+A max-pooling layer takes the maximum output of each LSTM unit (in each block) across the entire job description (that is, across the period during which the job description is fed to the classifier). This layer is fully connected to the output node.
 
 As before, the output node uses a sigmoid activation function to output a probability that the job description is fraudulent. Also, as before, we use binary cross-entropy as the loss function.
 
@@ -19,7 +19,7 @@ We experiment with different embedding dimension sizes (8, 16, 32) and various u
 The results are comparable to those from the bag-of-words and fully-connected neural network model.
 
 ### Future optimization
-We observe that the vast majority of the parameters trained in the LSTM model described above are for the word-embeddings layer. Also, each training epoch takes noticeably longer with the LSTM model than the fully-connected neural network model. We may be able to reduce the training time and potentially improve the F1 score if a robust pre-trained embedding was available.
+We observe that the vast majority of the parameters trained in the LSTM model described above are for the word-embeddings layer. Also, each training epoch takes noticeably longer with the LSTM model than the fully-connected neural network model. We may reduce the training time and potentially improve the F1 score if a robust pre-trained embedding was available.
 
 ### References
 [^colab1]: [Bag-of-words with a fully-connected neural network model](https://github.com/r-dube/fakejobs/blob/main/fj_fcnn.ipynb)

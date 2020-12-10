@@ -1,4 +1,21 @@
-12/8/2020
+
+12/10/2020
+1. embed_dim = 50
+   hidden_size = 32
+   Epoch 5/5
+   95/95 [==============================] - 41s 434ms/step - loss: 4.7101e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9907 F1 score: 0.8837
+2. Repeated the above experiment but after setting the maximum number of words in the tokenizer to 25000
+   Epoch 5/5
+   95/95 [==============================] - 42s 440ms/step - loss: 3.3852e-04 - accuracy: 1.0000 - false_positives_1: 0.0000e+00 - false_negatives_1: 0.0000e+00
+   Accuracy score: 0.9888 F1 score: 0.8571
+3. With glove (code clean up needed), embed_dim = 50
+   Epoch 10/10
+   95/95 [==============================] - 12s 128ms/step - loss: 0.0082 - accuracy: 0.9990
+   Accuracy score: 0.9795 F1 score: 0.7556
+
+
+12/9/2020
 1. Full dataset with hidden_size 32 (takes a long time to run)
    Epoch 5/5
    475/475 [==============================] - 258s 543ms/step - loss: 1.3497e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00

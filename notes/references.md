@@ -7,3 +7,4 @@
 * [^colab1]: [Bag-of-words with a fully-connected neural network model](https://github.com/r-dube/fakejobs/blob/main/fj_fcnn.ipynb)
 * [^colab2]: [Bag-of-words + numerical features with a fully-connected neural network model](https://github.com/r-dube/fakejobs/blob/main/fj_fcnn_num.ipynb)
 * [^colab3]: [LSTM model with a word-embedding layer](https://github.com/r-dube/fakejobs/blob/main/fj_lstm.ipynb)
+* [^glove1]: [Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)

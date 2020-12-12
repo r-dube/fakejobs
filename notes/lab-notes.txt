@@ -4,6 +4,14 @@
    Epoch 5/5
    95/95 [==============================] - 16s 164ms/step - loss: 0.0026 - accuracy: 0.9993 - false_positives_3: 1.0000 - false_negatives_3: 1.0000
    Accuracy score: 0.9851 F1 score: 0.8000
+3. After clearing an error from the previous implementation
+   Epoch 5/5
+   95/95 [==============================] - 16s 173ms/step - loss: 0.0064 - accuracy: 0.9987 - false_positives: 1.0000 - false_negatives: 3.0000
+   Accuracy score: 0.9888 F1 score: 0.8571
+4. On the full data set
+   Epoch 5/5
+   475/475 [==============================] - 105s 222ms/step - loss: 1.1689e-04 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9851 F1 score: 0.8413
 
 12/10/2020
 1. embed_dim = 50

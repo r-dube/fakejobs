@@ -1,3 +1,9 @@
+12/12/2020
+1. Glove LSTM model needs to be revisited - it fails on syntax currently. Need to rerun final result to confirm finding.
+2. First transformer model
+   Epoch 5/5
+   95/95 [==============================] - 16s 164ms/step - loss: 0.0026 - accuracy: 0.9993 - false_positives_3: 1.0000 - false_negatives_3: 1.0000
+   Accuracy score: 0.9851 F1 score: 0.8000
 
 12/10/2020
 1. embed_dim = 50

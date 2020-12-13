@@ -1,20 +1,20 @@
 ---
 title: A Transformer model from scratch
 ---
-We create and experiment with a Transformer model and compare results with the full-connected neural network and LSTM models.
+We create and experiment with a Transformer model and compare results with the fully-connected neural network and LSTM models.
 
 ### Why Transformers
-Transformers are a relatively new class of neural network models. Like LSTM, transformers are well suited to sequenced data such as natural language text ([^trans1], [^trans2]). Given this backround, we expect a Transformer model to be a relevant comparison point.
+Transformers are a relatively new class of neural network models. Like LSTM, transformers are well suited to sequenced data such as natural language text ([^trans1], [^trans2]). Given this background, we expect a Transformer model to be a relevant comparison point.
 
-We use the Keras Transformer sample code ([^trans3]) to implement the model on Colab([^trans2]).
+We use the Keras Transformer sample code ([^trans3]) to implement the model on Colab([^colab5]).
 
 ### Results
-After training for five epochs on the full data set ([^data1]), we see that the Transformer model achieves an accuracy of 98.51% and an F1 score of 84.13%. These results are comparable with those the bag-of-words + fully-connected neural network model ([^colab1]) and the LSTM model ([^colab3]).
+After training for five epochs on the full data set ([^data1]), we see that the Transformer model achieves an accuracy of 98.51% and an F1 score of 84.13%. These results are comparable with those of the bag-of-words + fully-connected neural network model ([^colab1]) and the LSTM model ([^colab3]).
 
 ### Potential future work
-Given the similarity in performance across the three models, we wonder if some fraudulent jobs are in fact indistinguishable from real jobs, even for human experts. 
+Given the similarity in performance across the three models, we wonder if some fraudulent jobs are, in fact, indistinguishable from real jobs, even for human experts. 
 
-We also wonder if an ensemble of the three models would produce better results than any of the individual models. 
+We also wonder if an ensemble of the three models would produce better results than any individual model. 
 
 Finally, we observe that we experimented relatively little with hyper-parameters of the Transformer model. Perhaps there are (as yet undiscovered) settings that improve the Transformer model's performance over the other two models mentioned in this article.
 

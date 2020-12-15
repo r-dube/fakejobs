@@ -1,3 +1,35 @@
+
+12/15/2020
+1. Using the transformer model with GPU on colab takes ~38% of the time to run
+   Epoch 5/5
+   475/475 [==============================] - 39s 82ms/step - loss: 8.3997e-05 - accuracy: 1.0000 - false_positives: 0.0000e+00 - false_negatives: 0.0000e+00
+   Accuracy score: 0.9870 F1 score: 0.8293
+   False Positives: 4 False Negatives: 31
+   Confusion matrix:
+    [[2562    4]
+    [  31   85]]
+2. Using TPU as the runtime is approximately the same as running with CPUs. Likely some additional configureation needs to be turned on for speedup.
+   Epoch 5/5
+   475/475 [==============================] - 94s 199ms/step - loss: 0.0023 - accuracy: 0.9992 - false_positives: 7.0000 - false_negatives: 5.0000
+   Accuracy score: 0.9855 F1 score: 0.8571
+   False Positives: 16 False Negatives: 23
+   Confusion matrix:
+    [[2526   16]
+    [  23  117]]
+3. It appears os.environ['CUDA_VISIBLE_DEVICES'] = '-1' not os.environ['CUDA_VISIBLE_DEVICES'] = '' is needed to force Colab to use only the CPU, when a GPU is also present
+4. Ensemble on medium data set, after setting threshold to 20% (probability of being fake)
+   Accuracy score: 0.9832 F1 score: 0.7907
+   False Positives: 3 False Negatives: 6
+   Confusion matrix:
+    [[511   3]
+    [  6  17]]
+5. With GPU, training LSTM seems to take longer. Reverting to running entire LSTM model on CPU
+   Accuracy score: 0.9881 F1 score: 0.8815
+   False Positives: 7 False Negatives: 25
+   Confusion matrix:
+    [[2531    7]
+    [  25  119]]
+
 12/12/2020
 1. Glove LSTM model needs to be revisited - it fails on syntax currently. Need to rerun final result to confirm finding.
 2. First transformer model

@@ -23,12 +23,55 @@
    Confusion matrix:
     [[511   3]
     [  6  17]]
-5. With GPU, training LSTM seems to take longer. Reverting to running entire LSTM model on CPU
+5. With GPU, training LSTM seems to take longer. Reverting to running entire LSTM model on CPU. 20% as cutoff
    Accuracy score: 0.9881 F1 score: 0.8815
    False Positives: 7 False Negatives: 25
    Confusion matrix:
     [[2531    7]
     [  25  119]]
+6. with 10% cutoff
+   Accuracy score: 0.9877 F1 score: 0.8817
+   False Positives: 12 False Negatives: 21
+   Confusion matrix:
+    [[2526   12]
+    [  21  123]]
+7. with 50% cutoff
+   Accuracy score: 0.9858 F1 score: 0.8492
+   False Positives: 1 False Negatives: 37
+   Confusion matrix:
+    [[2537    1]
+    [  37  107]]
+8. with 33% cutoff
+   Accuracy score: 0.9866 F1 score: 0.8615
+   False Positives: 4 False Negatives: 32
+   Confusion matrix:
+    [[2534    4]
+    [  32  112]]
+9. with 5% as cutoff
+   Accuracy score: 0.9873 F1 score: 0.8803
+   False Positives: 15 False Negatives: 19
+   Confusion matrix:
+    [[2523   15]
+    [  19  125]]
+10.20% cutoff redo
+   Accuracy score: 0.9870 F1 score: 0.8708
+   False Positives: 9 False Negatives: 26
+   Confusion matrix:
+    [[2529    9]
+    [  26  118]]
+11.15% cutoff
+   Accuracy score: 0.9881 F1 score: 0.8841
+   False Positives: 10 False Negatives: 22
+   Confusion matrix:
+    [[2528   10]
+    [  22  122]]
+12.Results with a stacking ensemble and a 15% cutoff are not any better
+   Accuracy score: 0.9855 F1 score: 0.8446
+   False Positives: 1 False Negatives: 38
+   Confusion matrix:
+    [[2537    1]
+    [  38  106]]
+
 
 12/12/2020
 1. Glove LSTM model needs to be revisited - it fails on syntax currently. Need to rerun final result to confirm finding.

@@ -1,3 +1,12 @@
+1/12/2021
+1. Return to sparse matrix representation of BOW from count vectorizer
+2. BOW with logistic regression achieves 
+    Accuracy score: 0.9858 F1 score: 0.8538
+    False Positives: 5 False Negatives: 33
+3. Results are comparable to the various NN models
+
+1/11/2021
+1. BOW with Logistic regression runs out of memory and crashed on colab (restarting the session)
 
 12/15/2020
 1. Using the transformer model with GPU on colab takes ~38% of the time to run

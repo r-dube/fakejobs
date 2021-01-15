@@ -11,6 +11,7 @@
 * [^colab5]: [Transformer model](https://github.com/r-dube/fakejobs/blob/main/fj_transformer.ipynb)
 * [^colab6]: [Ensemble models](https://github.com/r-dube/fakejobs/blob/main/fj_ensemble.ipynb)
 * [^colab7]: [Logistic regression model with bag-of-words](https://github.com/r-dube/fakejobs/blob/main/fj_bow_logistic.ipynb)
+* [^colab8]: [Bag-of-words, neural network model with no hidden layer](https://github.com/r-dube/fakejobs/blob/main/fj_nohidden.ipynb)
 * [^glove1]: [Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
 * [^trans1]: [Transformers from scratch (video lecture)](https://www.youtube.com/playlist?list=PLIXJ-Sacf8u60G1TwcznBmK6rEL3gmZmV)
 * [^trans2]: [Transformers from scratch (blog post)](http://peterbloem.nl/blog/transformers)

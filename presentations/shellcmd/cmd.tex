@@ -37,6 +37,9 @@
 		\item Powershell increasingly used in attacks \cite{symc2016}
 		\item (In general) Fileless attack techniques increasing \cite{symc2017}
 		\item Scripts becoming weapons of choice for sophisticated attack groups \cite{msft2017-2}
+		\begin{itemize}
+			\item Fileless technques used during the SolarWinds hack \cite{zdnet2021}
+		\end{itemize}
 		\item Complicated and obfuscated scripts difficult for human analysts to decipher \cite{feye2018}
 	\end{itemize}
 \end{frame}
@@ -73,20 +76,19 @@
 
 \section{Model design space}
 
-\begin{frame}{Summary}
-
-  Get the source of this theme and the demo presentation from
-
-  \begin{center}\url{github.com/matze/mtheme}\end{center}
-
-  The theme \emph{itself} is licensed under a
-  \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
-  Attribution-ShareAlike 4.0 International License}.
-
-  \begin{center}\ccbysa\end{center}
-
+\begin{frame}[fragile]{What model design attributes to choose?}
+	The model design space is large \cite{msft2017,powershell2018,amsi2019,feye2018,feye2018-2,textcnn2016,textcnn2019}:
+	\begin{itemize}
+		\item Manual feature extraction (traditional classification) vs. automatic feature extraction (neural network)
+		\item Character based model vs. token (word) based model?
+		\item Bag-of-words vs. embedding representation?
+		\item Inline embedding vs. separately trained embedding?
+		\item Use CNN for feature extraction?
+		\item (For sequnce modeling) LSTM vs Transformers? 
+		\item (If multiple models are used) Ensemble technique to combine verdicts?
+		\item (If other signals are used) Ensemble technique to include external signals?
+	\end{itemize}
 \end{frame}
-
 \begin{frame}[standout]
   Questions?
 \end{frame}
@@ -95,6 +97,7 @@
 
 \begin{frame}[allowframebreaks]{References}
 
+  \setbeamertemplate{bibliography item}{\insertbiblabel}
   \bibliography{cmd}
   \bibliographystyle{alpha}
 

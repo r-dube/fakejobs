@@ -2,6 +2,18 @@
 1. The threshold used as the cut-off for various models has been somewhat arbitrary. One idea is to build an ROC curve for the different models and then compare the curves across the different models.
 2. A model idea to try: "Character-level Convolutional Networks for Text Classification"
 3. Replace counts in the BOW + LR and BOW + Output node (no hidden layer) model with presence (1/0) to improve interpretability.
+4. BOW + LR (replace counts with presence in countvectorizer)
+   Accuracy score: 0.9870 F1 score: 0.8659
+   False Positives: 4 False Negatives: 31
+   Confusion matrix:
+    [[2534    4]
+    [  31  113]]
+5. Moving the nohidden model to presence
+   Accuracy score: 0.9870 F1 score: 0.8718
+   False Positives: 10 False Negatives: 25
+   Confusion matrix:
+   [[2528   10]
+   [  25  119]]
 
 1/12/2021
 1. Return to sparse matrix representation of BOW from count vectorizer

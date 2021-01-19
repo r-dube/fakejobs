@@ -13,33 +13,36 @@ We had converted the sparse matrix BOW representation from Scikit-learn's CountV
 
 However, using the dense matrix BOW representation causes the logistic regression module to run out of memory due to very high dimensionality. It turns out that the logistic regression module can, in fact, work with sparse matrices. Reverting to the original sparse matrix BOW output of the CountVectorizer allows the experiment to proceed.
 
+Finally, instead of using counts in the BOW representation, we switch to a binary mode (that records the presence or absence of a word). Such a model would  be simpler to interpret.
+
 ### Results of Logistic Regression Model
-The logistic regression model trains faster in comparison to the neural network models and returns an accuracy of 98.58% and an F1 score of 85.38%
+The logistic regression model trains faster in comparison to the neural network models and returns an accuracy of 98.70% and an F1 score of 86.59%
 
 ### Top-20 Words Indicating Fraud
 We trace back the largest coefficients in the logistic regression model (indicating the most influential words in fraudulent job postings) to the job postings' original words. We list the 20 most significant words from the training data below. The first number represents the index in the dictionary produced by the CountVectorizer. The second number is the logistic regression coefficient of the corresponding word. Finally, the third field represents the word itself.
-* 33685 0.583666549778054 forward
-* 90601 0.5880771388570726 warsaw
-* 50275 0.5922453583229651 migration
-* 58424 0.5894725690060855 personable
-* 25611 0.6014009057248951 duration
-* 3537 0.6200141194192783 administrative
-* 85478 0.6097342380566507 trends
-* 2560 0.6230277267508464 accountant
-* 51410 0.6342872633589646 motivated
-* 51049 0.6430812625819265 money
-* 8060 0.6540206821739426 au
-* 25832 0.7034693991546753 earn
-* 2420 0.7909873621854235 accion
-* 28288 0.7036004048677369 entry
-* 90433 0.696350398561821 wages
-* 70901 1.2517113334375831 rohan
-* 6562 0.8661454561535944 aptitude
-* 53381 0.6744264060592281 northwestern
-* 45978 1.0131995590683975 link
-* 4869 0.6697178300384368 american
+* 8876 0.6258794722749936 balance
+* 73348 0.6333128423457315 send
+* 25611 0.6259285387198736 duration
+* 38004 0.6434919556502703 hospital
+* 90433 0.75822867725062 wages
+* 51049 0.7556025983045982 money
+* 54480 0.7290765727550464 oil
+* 26515 0.7340161687538614 egovernment
+* 939 0.6560803983381377 28
+* 6562 0.7140744759683485 aptitude
+* 90601 0.6543170280066289 warsaw
+* 54398 0.7694429585002532 offshore
+* 2587 1.0494498113942459 accounting
+* 83983 0.8756074645931318 timejob
+* 1 0.7794737530953701 000
+* 45978 1.4066493742729074 link
+* 70901 1.2020262877494345 rohan
+* 3537 0.9737890429754346 administrative
+* 8060 0.8073265859315331 au
+* 25832 1.0480087026327678 earn
 
-Some of the top-20 words make intuitive sense. Words such as "money," "earn," "wages," and "motivated" match one's intuition of a fake job description. However, other words are surprising. "rohan" is a first name, and words such as "aptitude" and "trends" do not seem out of place in a job description. 
+
+Some of the top-20 words make intuitive sense. Words such as "money," "earn," and "wages," match one's intuition of a fake job description. However, other words are surprising. "rohan" is a first name, and words such as "aptitude" and "duration" do not seem out of place in a job description. 
 
 In any case, the BOW + logistic regression model enables interpretation of the results, which is not easily feasible with the neural network models.
 

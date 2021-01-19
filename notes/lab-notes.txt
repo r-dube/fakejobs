@@ -1,3 +1,7 @@
+1/18/2021
+1. The threshold used as the cut-off for various models has been somewhat arbitrary. One idea is to build an ROC curve for the different models and then compare the curves across the different models.
+2. A model idea to try: "Character-level Convolutional Networks for Text Classification"
+
 1/12/2021
 1. Return to sparse matrix representation of BOW from count vectorizer
 2. BOW with logistic regression achieves 

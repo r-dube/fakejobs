@@ -52,7 +52,7 @@
 		\item Classifier design
 	\end{itemize}
 
-	The model design space (under the above headings) is large \cite{survey2021,msft2017,powershell2018,amsi2019,feye2018,feye2018-2,textcnn2016,textcnn2019}:
+	The model design space (under the above headings) is large \cite{survey2021,msft2017,powershell2018,amsi2019,feye2018,feye2018-2,textcnn2016,textcnn2019,transformers2019}:
 \end{frame}
 
 \begin{frame}{Input data source considerations...}
@@ -176,7 +176,7 @@
 	\end{itemize}
 	Other notes:
 	\begin{itemize}
-		\item True positive rate = 0.894 (for false positive rate $\le 10^{-3}$
+		\item True positive rate = 0.894 (for false positive rate $\le 10^{-3}$)
 		\item Embedding training time = 14 hours, Classifier training time = 5 hours
 		\begin{itemize}
 			\item Unlabeled dataset: 368K PowerShell scripts
@@ -203,6 +203,15 @@
 	Other notes:
 	\begin{itemize}
 		\item Classifier as described, detects obfuscation (not maliciousness)
+	\end{itemize}
+\end{frame}
+
+\section{Potential for new work}
+
+\begin{frame}[fragile]{Ideas for new work}
+	\begin{itemize}
+		\item Replace CNN + LSTM with Transformers \cite{transformers2019}
+		\item Identify easily-interpretable base model with reasonable performance
 	\end{itemize}
 \end{frame}
 

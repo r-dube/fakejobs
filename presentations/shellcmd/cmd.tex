@@ -44,22 +44,59 @@
 	\end{itemize}
 \end{frame}
 
-\section{Input data source}
+\section{Binary command line model design considerations}
 
-\begin{frame}{What input source to assume?}
+\begin{frame}[fragile]{Major decision points}
+	\begin{itemize}
+		\item Input data source
+		\item Classifier design
+	\end{itemize}
+
+	The model design space (under the above headings) is large \cite{survey2021,msft2017,powershell2018,amsi2019,feye2018,feye2018-2,textcnn2016,textcnn2019}:
+\end{frame}
+
+\begin{frame}{Input data source considerations...}
 	Techniques used, models created may be different based on input assumed \cite{msft2017-2,msft2019,feye2018}:
 	\begin{itemize}
 		\item PowerShell vs. VBScript vs. Javascript code 
 		\item Single command line vs. multi-line script
-		\item Raw script vs. that obtained through AMSI or sandbox
+		\item Raw script vs. that obtained through AMSI or sandbox (if different from raw)
 		\item Obfuscated vs. de-obfuscated script
 		\item Additional unlabelled corpus of scripts
 	\end{itemize}
 \end{frame}
 
-\section{Degree of pre-processing}
+\begin{frame}{Classifier design considerations...}
+	\begin{itemize}
+		\item Token-based features vs. character-based features
+		\begin{itemize}
+			\item For token-based features
+			\begin{itemize}
+				\item Encoding (bag-of-words) vs. embedding
+				\item Inline embedding vs. externally learned embedding
+				\item Word2Vec vs. FastText vs. something else
+			\end{itemize}
+			\item For character-based features
+			\begin{itemize}
+				\item Encode each character (bag-of-characters) vs something else
+			\end{itemize}
+		\end{itemize}
+		\item Manual-feature extraction vs. automatic feature extraction
+		\begin{itemize}
+			\item For automatic feature extraction
+			\begin{itemize}
+				\item CNN vs. self-attention (to extract features from a segment of the command line)
+				\item LSTM vs. position-encoding (to combine signals from sequences of features)
+			\end{itemize}
+		\end{itemize}
+		\item Ensembling technique
+		\begin{itemize}
+			\item Combine output of individual classifiers vs. combine classifiers inline (i.e., train classifiers together)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
 
-\begin{frame}[fragile]{What pre-processing to assume?}
+\begin{frame}{Other considerations: what pre-processing to assume?}
 	Prior work raises several quesions regarding pre-processing data \cite{powershell2018,amsi2019,feye2018}:
 	\begin{itemize}
 		\item Mechanism to declare a label malicious?
@@ -72,22 +109,6 @@
 		\item De-duplicate scripts via clustering and representative selection?
 	\end{itemize}
 	But, pre-processing partially depends on the the type of model chosen
-\end{frame}
-
-\section{Model design space}
-
-\begin{frame}[fragile]{What model design attributes to choose?}
-	The model design space is large \cite{survey2021,msft2017,powershell2018,amsi2019,feye2018,feye2018-2,textcnn2016,textcnn2019}:
-	\begin{itemize}
-		\item Manual feature extraction (traditional classification) vs. automatic feature extraction (neural network)
-		\item Character based model vs. token (word) based model?
-		\item Bag-of-words vs. embedding representation?
-		\item Inline embedding vs. separately trained embedding?
-		\item Use CNN for feature extraction?
-		\item (For sequnce modeling) LSTM vs Transformers? 
-		\item (If multiple models are used) Ensemble technique to combine verdicts?
-		\item (If other signals are used) Ensemble technique to include external signals?
-	\end{itemize}
 \end{frame}
 
 \section{Understanding prior work}

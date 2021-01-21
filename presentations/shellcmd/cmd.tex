@@ -38,9 +38,24 @@
 		\item (In general) Fileless attack techniques increasing \cite{symc2017}
 		\item Scripts becoming weapons of choice for sophisticated attack groups \cite{msft2017-2}
 		\begin{itemize}
-			\item Fileless technques used during the SolarWinds hack \cite{zdnet2021}
+			\item Fileless techniques used during the SolarWinds hack \cite{zdnet2021}
 		\end{itemize}
 		\item Complicated and obfuscated scripts difficult for human analysts to decipher \cite{feye2018}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Malicious shell commands are a subset of file-less malware}
+	File-less malware definition (adapted from \cite{symc2017}):
+	\begin{itemize}
+		\item Only pre-installed software is used and no additional binary executables are installed onto the system by the attacker (no files are written to disk)
+		\item Eg., VB scripts, PowerShell scripts, or the use of system commands, such as netsh commands.
+	\end{itemize}
+	Mailicous command lined definition:
+	\begin{itemize}
+		\item Defined solely in terms of available analyses and external verdicts on the analyses
+		\item A command line is malicious if it only appears in analyses deemed malicious 
+		\item A command line is benign if it only appears in analyses deemed benign
+		\item A command line that appears in both malicous and benign analyses is declared malicious if ...
 	\end{itemize}
 \end{frame}
 
@@ -63,6 +78,9 @@
 		\item Raw script vs. that obtained through AMSI or sandbox (if different from raw)
 		\item Obfuscated vs. de-obfuscated script
 		\item Additional unlabeled corpus of scripts
+		\begin{itemize}
+			\item Unlabeled data may be available from \cite{data1,data2}
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 

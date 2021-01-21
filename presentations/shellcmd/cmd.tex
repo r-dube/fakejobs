@@ -111,35 +111,73 @@
 	But, pre-processing partially depends on the the type of model chosen
 \end{frame}
 
-\section{Understanding prior work}
+\section{Understanding prior work on malicious command line detection}
 
-\begin{frame}[fragile]{Extract coherent lego block models}
+\begin{frame}[fragile]{Extract coherent lego blocks}
 	\begin{itemize}
-		\item textCNN model \cite{textcnn2016,textcnn2019,powershell2018}
-		\item CNN-LSTM model \cite{amsi2019}
-		\item Obfuscation detection model \cite{feye2018}
+		\item textCNN classifier \cite{textcnn2016,textcnn2019,powershell2018}
+		\item CNN-LSTM classifier \cite{amsi2019}
+		\item Obfuscation detector \cite{feye2018}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Lego block model 1: textCNN}
+\begin{frame}{Lego block 1: textCNN (1)}
 	\begin{figure}
 		\includegraphics[scale=0.28]{textcnn}
 		\caption{Text CNN model as used in \cite{powershell2018}}
 	\end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{Lego block model 2: CNN-LSTM}
+\begin{frame}{Lego block 1: textCNN (2)}
+	Classifier design:
+	\begin{itemize}
+		\item Character encoding (bag-of-characters)
+		\item CNN to extract features
+		\item No explicit mechanism to learn from sequence
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Lego block 2: CNN-LSTM (1)}
 	\begin{figure}
 		\includegraphics[scale=0.50]{cnn-lstm}
 		\caption{CNN-LSTM model as used in \cite{amsi2019}}
 	\end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{Lego block model 3: obfuscation detection}
+\begin{frame}{Lego block 2: CNN-LSTM (2)}
+	Classifier design:
+	\begin{itemize}
+		\item Token based
+		\begin{itemize}
+			\item FastText embeding from tokens
+			\item Externally learned embedding
+		\end{itemize}
+		\item CNN to extract features
+		\item LSTM to learn from sequence of features
+		\begin{itemize}
+			\item Difficult to parallelize training
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Lego block 3: obfuscation detector (1)}
 	\begin{figure}
 		\includegraphics[scale=0.50]{gbtree}
 		\caption{Obfuscation detection model as used in \cite{feye2018}}
 	\end{figure}
+\end{frame}
+
+\begin{frame}{Lego block 3: obfuscation detector (2)}
+	Classifier design:
+	\begin{itemize}
+		\item No expliciting encoding or embedding
+		\item Manually extracted features
+		\item Tradional machine learning classification technique (gradient boosted trees)
+	\end{itemize}
+	Other notes:
+	\begin{itemize}
+		\item Classifier as described, detects obfuscation (not maliciousness)
+	\end{itemize}
 \end{frame}
 
 \begin{frame}[standout]

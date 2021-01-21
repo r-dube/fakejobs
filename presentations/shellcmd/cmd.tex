@@ -34,7 +34,7 @@
 \begin{frame}[fragile]{Why study this topic?}
 	Several reasons to study the topic:
 	\begin{itemize}
-		\item Powershell increasingly used in attacks \cite{symc2016}
+		\item PowerShell increasingly used in attacks \cite{symc2016}
 		\item (In general) Fileless attack techniques increasing \cite{symc2017}
 		\item Scripts becoming weapons of choice for sophisticated attack groups \cite{msft2017-2}
 		\begin{itemize}
@@ -62,7 +62,7 @@
 		\item Single command line vs. multi-line script
 		\item Raw script vs. that obtained through AMSI or sandbox (if different from raw)
 		\item Obfuscated vs. de-obfuscated script
-		\item Additional unlabelled corpus of scripts
+		\item Additional unlabeled corpus of scripts
 	\end{itemize}
 \end{frame}
 
@@ -117,6 +117,7 @@
 	\begin{itemize}
 		\item textCNN classifier \cite{textcnn2016,textcnn2019,powershell2018}
 		\item CNN-LSTM classifier \cite{amsi2019}
+		\item textCNN + CNN-LSTM classifier \cite{amsi2019}
 		\item Obfuscation detector \cite{feye2018}
 	\end{itemize}
 \end{frame}
@@ -160,14 +161,39 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Lego block 3: obfuscation detector (1)}
+\begin{frame}{Lego block 3: textCNN + CNN-LSTM (1)}
+	\begin{figure}
+		\includegraphics[scale=0.20]{inlineEnsemble}
+		\caption{textCNN + CNN-LSTM model as used in \cite{amsi2019}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Lego block 3: textCNN + CNN-LSTM (2)}
+	Classifier design:
+	\begin{itemize}
+		\item Inline ensemble of textCNN and CNN-LSTM
+		\item Bi-directional LSTM combines the signals from the two models
+	\end{itemize}
+	Other notes:
+	\begin{itemize}
+		\item True positive rate = 0.894 (for false positive rate $\le 10^{-3}$
+		\item Embedding training time = 14 hours, Classifier training time = 5 hours
+		\begin{itemize}
+			\item Unlabeled dataset: 368K PowerShell scripts
+			\item Labeled dataset: 117K scripts (5K malicous)
+			\item Azure-hosted Data-Science-VM with 56 GB of CPU memory (6 vCPUs) and 12 GB of GPU memory (single core)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Lego block 4: obfuscation detector (1)}
 	\begin{figure}
 		\includegraphics[scale=0.50]{gbtree}
 		\caption{Obfuscation detection model as used in \cite{feye2018}}
 	\end{figure}
 \end{frame}
 
-\begin{frame}{Lego block 3: obfuscation detector (2)}
+\begin{frame}{Lego block 4: obfuscation detector (2)}
 	Classifier design:
 	\begin{itemize}
 		\item No expliciting encoding or embedding

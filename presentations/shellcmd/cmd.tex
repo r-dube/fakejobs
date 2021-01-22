@@ -38,7 +38,7 @@
 		\item (In general) Fileless attack techniques increasing \cite{symc2017}
 		\item Scripts becoming weapons of choice for sophisticated attack groups \cite{msft2017-2}
 		\begin{itemize}
-			\item Fileless techniques used during the SolarWinds hack \cite{zdnet2021}
+			\item Fileless techniques used during the SolarWinds hack \cite{volexity2020,zdnet2021}
 		\end{itemize}
 		\item Complicated and obfuscated scripts difficult for human analysts to decipher \cite{feye2018}
 	\end{itemize}
@@ -47,24 +47,24 @@
 \begin{frame}{What is file-less malware?}
 	File-less malware definition (adapted from \cite{symc2017}):
 	\begin{itemize}
-		\item Only pre-installed software is used and no additional binary executables are installed onto the system by the attacker (no files are written to disk).
-		\item Eg., VBscripts, PowerShell scripts, or the use of system commands, such as netsh commands.
+		\item Only pre-installed software is used, and no additional binary executables are installed onto the system by the attacker (no files are written to disk).
+		\item Eg., VBscript, PowerShell scripts, or the use of system commands, such as netsh commands.
 		\item Eg., Memory only shellcode dropped by an exploit, which does not write any files on disk. 
 		\item Eg., Brute forcing the password for Remote Desktop Protocol (RDP) access.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Malicious shell commands are a subset of file-less malware}
-	Mailicous command line is:
+	Mailicous command-line is:
 	\begin{itemize}
 		\item Defined solely in terms of analyses of objects and (external) verdicts on the analyses.
-		\item A command line is malicious if it only appears in analyses deemed malicious.
-		\item A command line is benign if it only appears in analyses deemed benign.
-		\item A command line that appears in both malicous and benign analyses is declared malicious if ... \textcolor{red}{needs to be defined.}
+		\item A command-line is malicious if it only appears in analyses deemed malicious.
+		\item A command-line is benign if it only appears in analyses deemed benign.
+		\item A command-line that appears in both malicious and benign analyses is declared malicious if ... \textcolor{red}{needs to be defined.}
 	\end{itemize}
 \end{frame}
 
-\section{Binary command line model design considerations}
+\section{Binary command-line model design considerations}
 
 \begin{frame}[fragile]{Major decision points}
 	\begin{itemize}
@@ -76,10 +76,10 @@
 \end{frame}
 
 \begin{frame}{Input data source considerations...}
-	Techniques used, models created may be different based on input assumed \cite{msft2017-2,msft2019,feye2018}:
+	(In general) the most appropriate techniques may vary depending on input \cite{msft2017-2,msft2019,feye2018}:
 	\begin{itemize}
 		\item PowerShell vs. VBScript vs. Javascript code 
-		\item Single command line vs. multi-line script
+		\item Single command-line vs. multi-line script
 		\item Raw script vs. that obtained through AMSI or sandbox (if different from raw)
 		\item Obfuscated vs. de-obfuscated script
 		\item Additional unlabeled corpus of scripts
@@ -108,19 +108,19 @@
 		\begin{itemize}
 			\item For automatic feature extraction
 			\begin{itemize}
-				\item CNN vs. self-attention (to extract features from a segment of the command line)
+				\item CNN vs. self-attention (to extract features from a segment of the command-line)
 				\item LSTM vs. position-encoding (to combine signals from sequences of features)
 			\end{itemize}
 		\end{itemize}
 		\item Ensembling technique
 		\begin{itemize}
-			\item Combine output of individual classifiers vs. combine classifiers inline (i.e., train classifiers together)
+			\item Combine output of individual classifiers vs. combine classifiers inline (ie., train classifiers together)
 		\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Other considerations: what pre-processing to assume?}
-	Prior work raises several quesions regarding pre-processing data \cite{powershell2018,amsi2019,feye2018}:
+	Prior work raises several questions regarding pre-processing data \cite{powershell2018,amsi2019,feye2018}:
 	\begin{itemize}
 		\item Mechanism to declare a label malicious?
 		\item De-obfuscate script coded in base64 (and other) encodings?
@@ -134,7 +134,7 @@
 	But, pre-processing partially depends on the the type of model chosen
 \end{frame}
 
-\section{Understanding prior work on malicious command line detection}
+\section{Understanding prior work on malicious command-line detection}
 
 \begin{frame}[fragile]{Extract coherent lego blocks}
 	\begin{itemize}

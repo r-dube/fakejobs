@@ -12,7 +12,7 @@ ROC curves are explained in [^wiki1]. These curves are useful to understand clas
 We observe that:
 * even at low false-positive rates, the performance of the four models remains close
 * the LSTM model does slightly better than the other three models at most (low) false-positive rate thresholds
-* the Logistic regress model does quite nicely despite its simplicity
+* the Logistic regression model does quite nicely despite its simplicity
 
 ### References
 [^wiki1]: [Receiver Operating Characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)

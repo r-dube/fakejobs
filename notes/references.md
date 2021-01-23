@@ -18,4 +18,4 @@
 * [^trans2]: [Transformers from scratch (blog post)](http://peterbloem.nl/blog/transformers)
 * [^trans3]: [Text classification with Transformer](https://keras.io/examples/nlp/text_classification_with_transformer/)
 * [^ensemble1]: [Ensemble techniques](https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/)
-* [^wiki1]: [ROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
+* [^wiki1]: [Receiver Operating Characteristic]](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)

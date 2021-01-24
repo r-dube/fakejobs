@@ -72,7 +72,7 @@
 		\item Classifier design
 	\end{itemize}
 
-	The model design space (under the above headings) is large \cite{survey2021,msft2017,powershell2018,amsi2019,feye2018,feye2018-2,textcnn2016,textcnn2019,transformers2019}:
+	The model design space (under the above headings) is large \cite{survey2021,msft2017,powershell2018,amsi2019,feye2018,feye2018-2,charcnn2016,charcnn2019,transformers2019}:
 \end{frame}
 
 \begin{frame}{Input data source considerations (1) ...}
@@ -142,22 +142,22 @@
 
 \begin{frame}[fragile]{Extract coherent lego blocks}
 	\begin{itemize}
-		\item textCNN classifier \cite{textcnn2016,textcnn2019,powershell2018}
+		\item charCNN classifier \cite{charcnn2016,charcnn2019,powershell2018}
 		\item CNN-LSTM classifier \cite{amsi2019}
-		\item textCNN + CNN-LSTM classifier \cite{amsi2019}
+		\item charCNN + CNN-LSTM classifier \cite{amsi2019}
 		\item Character-level 3-gram + TF-IDF + Logistic regression \cite{amsi2019}
 		\item Obfuscation detector \cite{feye2018}
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Lego block 1: textCNN (1)}
+\begin{frame}{Lego block 1: charCNN (1)}
 	\begin{figure}
-		\includegraphics[scale=0.28]{textcnn}
+		\includegraphics[scale=0.28]{charcnn}
 		\caption{Text CNN model as used in \cite{powershell2018}}
 	\end{figure}
 \end{frame}
 
-\begin{frame}{Lego block 1: textCNN (2)}
+\begin{frame}{Lego block 1: charCNN (2)}
 	Classifier design:
 	\begin{itemize}
 		\item Character encoding (bag-of-characters)
@@ -189,17 +189,17 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Lego block 3: textCNN + CNN-LSTM (1)}
+\begin{frame}{Lego block 3: charCNN + CNN-LSTM (1)}
 	\begin{figure}
 		\includegraphics[scale=0.20]{inlineEnsemble}
-		\caption{textCNN + CNN-LSTM model as used in \cite{amsi2019}}
+		\caption{charCNN + CNN-LSTM model as used in \cite{amsi2019}}
 	\end{figure}
 \end{frame}
 
-\begin{frame}{Lego block 3: textCNN + CNN-LSTM (2)}
+\begin{frame}{Lego block 3: charCNN + CNN-LSTM (2)}
 	Classifier design:
 	\begin{itemize}
-		\item Inline ensemble of textCNN and CNN-LSTM
+		\item Inline ensemble of charCNN and CNN-LSTM
 		\item Bi-directional LSTM combines the signals from the two models
 	\end{itemize}
 	Other notes:
@@ -224,7 +224,7 @@
 \begin{frame}{Reported performance}
         While holding false positive rate $\le 10^{-3}$, true positive rate on held-out test set:
         \begin{itemize}
-		\item textCNN: 0.799
+		\item charCNN: 0.799
 		\item CNN-LSTM: 0.894
 		\item Character-level 3-gram + TF-IDF + Logistic regression: 0.667
         \end{itemize}

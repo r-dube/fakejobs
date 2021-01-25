@@ -5,7 +5,7 @@ Given that the models' performance is similar for F1 scores, we draw some Receiv
 
 ROC curves are explained in [^wiki1]. These curves are useful to understand classification performance across a range of false-positive rates.
 
-[^colab9] takes the predicted probabilities of a job description being fraudulent (in the test set) and extracts a ROC curve from them. Four models are plotted: BOW + FCNN ([^colab1]), LSTM with inline embedding ([^colab3]), Transformer with position encoding ([^colab5]), and BOW + Logistic Regression ([^colab7]). The results are in the figure below:
+[^colab9] takes the predicted probabilities of a job description being fraudulent (in the test set) and extracts a ROC curve from them. Four models are plotted: BOW + FCNN ([^colab1]), LSTM with inline embedding ([^colab3]), Transformer with position embedding ([^colab5]), and BOW + Logistic Regression ([^colab7]). The results are in the figure below:
 
 ![ROC Curves](/fakejobs/assets/images/roc_curves-2021-01-23.png)
 

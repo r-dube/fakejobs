@@ -1,3 +1,11 @@
+1/25/2021
+1. First version of char CNN model. Single fully-connected layer after convolution
+   Accuracy score: 0.9664 F1 score: 0.5631
+   False Positives: 4 False Negatives: 86
+   Confusion matrix:
+   [[2534    4]
+   [  86   58]]
+
 1/18/2021
 1. The threshold used as the cut-off for various models has been somewhat arbitrary. One idea is to build an ROC curve for the different models and then compare the curves across the different models.
 2. A model idea to try: "Character-level Convolutional Networks for Text Classification"

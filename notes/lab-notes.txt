@@ -1,3 +1,20 @@
+1/26/2021
+1. Char CNN model after a few logic fixes
+   Accuracy score: 0.9739 F1 score: 0.7083
+   False Positives: 11 False Negatives: 59
+   Confusion matrix:
+    [[2527   11]
+    [  59   85]]
+   AUC score: 0.9448
+2. ngram-tfidf-logistic model
+   Accuracy score: 0.9728 F1 score: 0.7542
+   False Positives: 41 False Negatives: 32
+   Confusion matrix:
+    [[2497   41]
+    [  32  112]]
+   AUC score: 0.9640
+
+
 1/25/2021
 1. First version of char CNN model. Single fully-connected layer after convolution
    Accuracy score: 0.9664 F1 score: 0.5631

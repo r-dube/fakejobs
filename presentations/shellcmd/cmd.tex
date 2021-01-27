@@ -55,7 +55,7 @@
 \end{frame}
 
 \begin{frame}{Malicious shell commands are a subset of fileless malware}
-	Mailicous command-line is:
+	Malicous command-line is:
 	\begin{itemize}
 		\item Defined solely in terms of analyses of objects and (external) verdicts on the analyses
 		\item A command-line is malicious if it only appears in analyses deemed malicious
@@ -79,7 +79,7 @@
 	(In general) the most appropriate techniques will vary depending on input \cite{msft2017-2,msft2019,feye2018}:
 	\begin{itemize}
 		\item PowerShell vs. VBScript vs. Javascript code 
-		\item Single command-line vs. multi-line script
+		\item Single command (could be multiple lines) vs. multiple processes
 		\item Raw script vs. that obtained through AMSI or sandbox (if different from raw)
 		\item Obfuscated vs. de-obfuscated script
 		\item Additional corpora of scripts
@@ -105,7 +105,7 @@
 		\item Eliminate rare tokens?
 		\item De-duplicate scripts via clustering and representative selection?
 	\end{itemize}
-	But, pre-processing partially depends on the the type of model chosen
+	But, pre-processing depends partially on the type of model chosen
 \end{frame}
 
 \begin{frame}{Classifier design considerations...}
@@ -128,7 +128,7 @@
 			\item For automatic feature extraction
 			\begin{itemize}
 				\item CNN vs. self-attention (to extract features from a segment of the command-line)
-				\item LSTM vs. position-encoding (to combine signals from sequences of features)
+				\item LSTM vs. position-embedding (to combine signals from sequences of features)
 			\end{itemize}
 		\end{itemize}
 		\item Ensembling technique
@@ -162,7 +162,7 @@
 	\begin{itemize}
 		\item Character encoding (bag-of-characters)
 		\item CNN to extract features
-		\item No explicit mechanism to learn from sequence
+		\item No explicit mechanism to learn from sequences
 	\end{itemize}
 \end{frame}
 
@@ -178,11 +178,11 @@
 	\begin{itemize}
 		\item Token based
 		\begin{itemize}
-			\item FastText embeding from tokens
+			\item FastText embedding from tokens
 			\item Externally learned embedding
 		\end{itemize}
 		\item CNN to extract features
-		\item LSTM to learn from sequence of features
+		\item LSTM to learn from sequences of features
 		\begin{itemize}
 			\item Difficult to parallelize training
 		\end{itemize}
@@ -200,7 +200,8 @@
 	Classifier design:
 	\begin{itemize}
 		\item Inline ensemble of charCNN and CNN-LSTM
-		\item Bi-directional LSTM combines the signals from the two models
+		\item Concatenation combines the signals from the two models
+		\item Bi-directional LSTM for sequence processing
 	\end{itemize}
 	Other notes:
 	\begin{itemize}
@@ -208,8 +209,8 @@
 		\item Embedding training time = 14 hours, Classifier training time = 5 hours
 		\begin{itemize}
 			\item Unlabeled dataset: 368K PowerShell scripts
-			\item Labeled dataset: 117K scripts (5K malicous)
-			\item Azure-hosted Data-Science-VM with 56 GB of CPU memory (6 vCPUs) and 12 GB of GPU memory (single core)
+			\item Labeled dataset: 117K scripts (5K malicious)
+			\item Azure-hosted Data-Science-VM with 56 GB of CPU memory (6 vCPUs) and 12 GB of GPU memory (single-core)
 		\end{itemize}
 	\end{itemize}
 \end{frame}
@@ -240,13 +241,13 @@
 \begin{frame}{Lego block 5: obfuscation detector (2)}
 	Classifier design:
 	\begin{itemize}
-		\item No expliciting encoding or embedding
+		\item No explicit encoding or embedding
 		\item Manually extracted features
-		\item Tradional machine learning classification technique (gradient boosted trees)
+		\item Traditional machine learning classification technique (gradient boosted trees)
 	\end{itemize}
 	Other notes:
 	\begin{itemize}
-		\item Classifier as described, detects obfuscation (not maliciousness)
+		\item Classifier as described detects obfuscation (not maliciousness)
 	\end{itemize}
 \end{frame}
 

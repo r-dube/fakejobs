@@ -1,3 +1,12 @@
+1/28/2021
+1. Token char model
+   Accuracy score: 0.9843 F1 score: 0.8409
+   False Positives: 9 False Negatives: 33
+   Confusion matrix:
+    [[2529    9]
+    [  33  111]]
+   AUC score: 0.9707
+
 1/26/2021
 1. Char CNN model after a few logic fixes
    Accuracy score: 0.9739 F1 score: 0.7083

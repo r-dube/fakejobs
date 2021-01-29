@@ -1,3 +1,12 @@
+1/29/2021
+1. Restriction vocabulary size to 50,000 for the token part of the composite model and running for 7 epochs on the full data set
+   Accuracy score: 0.9814 F1 score: 0.8201
+   False Positives: 20 False Negatives: 30
+   Confusion matrix:
+    [[2518   20]
+    [  30  114]]
+   AUC score: 0.9793
+
 1/28/2021
 1. Token char model
    Accuracy score: 0.9843 F1 score: 0.8409

@@ -20,7 +20,7 @@ The character part of the model makes a few adjustments to the one in ([^colab11
 ![Composite Model](/fakejobs/assets/images/composite_model-2021-01-29.png)
 
 ### Model performance
-We observe an accuracy score of 98.28%, an F1 score of 82.84%, and an AUC score of 97.67%.
+We observe an accuracy score of 98.43%, an F1 score of 83.85%, and an AUC score of 96.72%.
 
 ### References
 [^colab3]: [LSTM model with a word-embedding layer](https://github.com/r-dube/fakejobs/blob/main/fj_lstm.ipynb)

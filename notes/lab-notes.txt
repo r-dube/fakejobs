@@ -1,3 +1,12 @@
+2/1/2021
+2. Even with modified corpus that just trains on the processed words, performance remains poor
+   Accuracy score: 0.9627 F1 score: 0.5370
+   False Positives: 14 False Negatives: 86
+   Confusion matrix:
+    [[2524   14]
+    [  86   58]]
+   AUC score: 0.9274
+
 1/31/2021
 1. With first version of gensim created fasttext embedding
    Accuracy score: 0.9691 F1 score: 0.6344
@@ -7,7 +16,6 @@
     [  72   72]]
    AUC score: 0.9415
    The relatively poor performance is likely because the embedding was learned on the raw csv file which has a different set of tokens (example words with some capitalization in them) compared to the processed data
-
 
 1/29/2021
 1. Restriction vocabulary size to 50,000 for the token part of the composite model and running for 7 epochs on the full data set

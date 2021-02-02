@@ -19,6 +19,7 @@
 * [^colab11]: [Char CNN model](https://github.com/r-dube/fakejobs/blob/main/fj_char_cnn.ipynb)
 * [^colab12]: [Composite char and token model](https://github.com/r-dube/fakejobs/blob/main/fj_composite.ipynb)
 * [^colab13]: [Composite char and token model with trainable FastText embedding](https://github.com/r-dube/fakejobs/blob/c7fe25acbe28a08949f8a35003539cf7ee5687a2/fj_embedding_composite.ipynb)
+* [^colab13-2]: [Composite char and token model with trainable FastText embedding - updated](https://github.com/r-dube/fakejobs/blob/94eab0adc2e5309d6fdb3a8591abb68a3f16f7d2/fj_embedding_composite.ipynb)
 * [^glove1]: [Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
 * [^trans1]: [Transformers from scratch (video lecture)](https://www.youtube.com/playlist?list=PLIXJ-Sacf8u60G1TwcznBmK6rEL3gmZmV)
 * [^trans2]: [Transformers from scratch (blog post)](http://peterbloem.nl/blog/transformers)
@@ -28,3 +29,4 @@
 * [^paper1]: [Character-level Convolutional Networks for Text Classification](https://arxiv.org/pdf/1509.01626.pdf)
 * [^paper2]: [Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting](https://arxiv.org/pdf/1506.04214.pdf)
 * [^paper3]: [AMSI-Based Detection of Malicious PowerShell Code Using Contextual Embeddings](https://arxiv.org/abs/1905.09538)
+* [^word2vec]: [Word2vec and friends](https://www.youtube.com/watch?v=wTp3P2UnTfQ)

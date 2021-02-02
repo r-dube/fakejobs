@@ -17,6 +17,7 @@ model = FT_gensim(size=32)
 model.build_vocab(corpus_file=corpus_file)
 
 # train the model
+model.epochs = 15
 model.train(
     corpus_file=corpus_file, epochs=model.epochs,
     total_examples=model.corpus_count, total_words=model.corpus_total_words

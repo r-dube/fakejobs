@@ -5,7 +5,7 @@
 * [^data3]: [Small dataset: 3% of total](https://github.com/r-dube/fakejobs/blob/main/data/fj_small.csv)
 * [^script1]: [Script to split the dataset (also contains logistic regression classifier)](https://github.com/r-dube/fakejobs/blob/main/scripts/fj_prep.py)
 * [^script2]: [Script to clean data](https://github.com/r-dube/fakejobs/blob/main/scripts/fj_gensim_input.py)
-* [^script3]: [Script to generate FastText embedding](https://github.com/r-dube/fakejobs/blob/main/scripts/fj_gensim_embedding.py)
+* [^script3]: [Script to generate FastText embedding](https://github.com/r-dube/fakejobs/blob/main/scripts/fj_gensim_fasttext.py)
 * [^colab1]: [Bag-of-words with a fully-connected neural network model](https://github.com/r-dube/fakejobs/blob/main/fj_fcnn.ipynb)
 * [^colab2]: [Bag-of-words + numerical features with a fully-connected neural network model](https://github.com/r-dube/fakejobs/blob/main/fj_fcnn_num.ipynb)
 * [^colab3]: [LSTM model with a word-embedding layer](https://github.com/r-dube/fakejobs/blob/main/fj_lstm.ipynb)

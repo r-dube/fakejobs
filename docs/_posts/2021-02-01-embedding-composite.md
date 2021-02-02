@@ -21,5 +21,5 @@ The new model produces an accuracy score of 96.27%, an F1 score of 53.70%, and a
 [^colab12]: [Composite char and token model](https://github.com/r-dube/fakejobs/blob/main/fj_composite.ipynb)
 [^colab13]: [Composite char and token model with trainable FastText embedding](https://github.com/r-dube/fakejobs/blob/main/fj_embedding_composite.ipynb)
 [^script2]: [Script to clean data](https://github.com/r-dube/fakejobs/blob/main/scripts/fj_gensim_input.py)
-[^script3]: [Script to generate FastText embedding](https://github.com/r-dube/fakejobs/blob/main/scripts/fj_gensim_embedding.py)
+[^script3]: [Script to generate FastText embedding](https://github.com/r-dube/fakejobs/blob/main/scripts/fj_gensim_fasttext.py)
 [^gensim1]: [gensim: FastText Model](https://radimrehurek.com/gensim_3.8.3/auto_examples/tutorials/run_fasttext.html#sphx-glr-auto-examples-tutorials-run-fasttext-py)

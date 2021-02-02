@@ -1,5 +1,30 @@
+2/2/2021
+1. Embedding composite model. word2vec embedding with 64 dimensions trained for 15 iterations, 15 epochs of model training
+   Embeddings are not trained when the model runs
+   Accuracy score: 0.9836 F1 score: 0.8451
+   False Positives: 20 False Negatives: 24
+   Confusion matrix:
+    [[2518   20]
+    [  24  120]]
+   AUC score: 0.9794
+2. Same as above but with word2vec embedding of size 32
+   Accuracy score: 0.9799 F1 score: 0.8112
+   False Positives: 26 False Negatives: 28
+   Confusion matrix:
+    [[2512   26]
+    [  28  116]]
+   AUC score: 0.9731
+3. Using FastText instead of word2vec (32 dim trained over 15 epochs, model runs for 15 epochs, embeddings not trainable during model run)
+   Accuracy score: 0.9724 F1 score: 0.7132
+   False Positives: 22 False Negatives: 52
+   Confusion matrix:
+    [[2516   22]
+    [  52   92]]
+   AUC score: 0.9555
+
+
 2/1/2021
-2. Even with modified corpus that just trains on the processed words, performance remains poor
+1. Even with modified corpus that just trains on the processed words, performance remains poor
    Accuracy score: 0.9627 F1 score: 0.5370
    False Positives: 14 False Negatives: 86
    Confusion matrix:

@@ -18,7 +18,7 @@
 * [^colab10]: [N-gram + TF-IDF + Logistic regression model](https://github.com/r-dube/fakejobs/blob/main/fj_ngram_tfidf_logistic.ipynb)
 * [^colab11]: [Char CNN model](https://github.com/r-dube/fakejobs/blob/main/fj_char_cnn.ipynb)
 * [^colab12]: [Composite char and token model](https://github.com/r-dube/fakejobs/blob/main/fj_composite.ipynb)
-* [^colab13]: [Composite char and token model with trainable FastText embedding](https://github.com/r-dube/fakejobs/blob/main/fj_embedding_composite.ipynb)
+* [^colab13]: [Composite char and token model with trainable FastText embedding](https://github.com/r-dube/fakejobs/blob/c7fe25acbe28a08949f8a35003539cf7ee5687a2/fj_embedding_composite.ipynb)
 * [^glove1]: [Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
 * [^trans1]: [Transformers from scratch (video lecture)](https://www.youtube.com/playlist?list=PLIXJ-Sacf8u60G1TwcznBmK6rEL3gmZmV)
 * [^trans2]: [Transformers from scratch (blog post)](http://peterbloem.nl/blog/transformers)

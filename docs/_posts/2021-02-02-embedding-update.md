@@ -15,11 +15,12 @@ Finally, we train the composition model for longer: 15 epochs rather than the pr
 The results with the new model are respectable and notably better than the older model: accuracy of 97.24% (vs. 96.27%), F1 score of 71.32% (vs. 53.70%), AUC score of 95.55% (vs. 92.74%).
 
 ### Using Word2vec instead of FastText
-We find that the model's performance improves when switching from using FastText to Word2vec while holding all the other hyperparameters constant. We get an accuracy of 97.99%, an F1 score of 81.12%, and an AUC score of 97.31%.
+We find that the model's performance improves when switching from using FastText to Word2vec ([^word2vec1]) while holding all the other hyperparameters constant. We get an accuracy of 97.99%, an F1 score of 81.12%, and an AUC score of 97.31%.
 
-Clearly, the classification performance of the model is sensitive to the quality of the training. Unfortunately, there does not appear to be an easy way to judge the quality of an embedding on esoteric corpora ([^word2vec]).
+Clearly, the classification performance of the model is sensitive to the embedding technique and length of training. Unfortunately, there does not appear to be an easy way to judge the quality of an embedding on esoteric corpora ([^word2vec2]).
 
 ### References
 [^colab13]: [Composite char and token model with trainable FastText embedding](https://github.com/r-dube/fakejobs/blob/c7fe25acbe28a08949f8a35003539cf7ee5687a2/fj_embedding_composite.ipynb)
 [^colab13-2]: [Composite char and token model with trainable FastText embedding - updated](https://github.com/r-dube/fakejobs/blob/94eab0adc2e5309d6fdb3a8591abb68a3f16f7d2/fj_embedding_composite.ipynb)
-[^word2vec]: [Word2vec and friends](https://www.youtube.com/watch?v=wTp3P2UnTfQ)
+[^word2vec1]: [Word2Vec Tutorial - The Skip-Gram Model](ccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
+[^word2vec2]: [Word2vec and friends](https://www.youtube.com/watch?v=wTp3P2UnTfQ)

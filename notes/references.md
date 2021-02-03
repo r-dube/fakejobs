@@ -29,4 +29,5 @@
 * [^paper1]: [Character-level Convolutional Networks for Text Classification](https://arxiv.org/pdf/1509.01626.pdf)
 * [^paper2]: [Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting](https://arxiv.org/pdf/1506.04214.pdf)
 * [^paper3]: [AMSI-Based Detection of Malicious PowerShell Code Using Contextual Embeddings](https://arxiv.org/abs/1905.09538)
-* [^word2vec]: [Word2vec and friends](https://www.youtube.com/watch?v=wTp3P2UnTfQ)
+* [^word2vec1]: [Word2Vec Tutorial - The Skip-Gram Model](ccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
+* [^word2vec2]: [Word2vec and friends](https://www.youtube.com/watch?v=wTp3P2UnTfQ)

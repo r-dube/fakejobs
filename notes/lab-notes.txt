@@ -1,3 +1,19 @@
+2/4/2021
+1. Expanded corpus for embedding training (word2vec)
+   Accuracy score: 0.9810 F1 score: 0.8172
+   False Positives: 21 False Negatives: 30
+   Confusion matrix:
+    [[2517   21]
+    [  30  114]]
+   AUC score: 0.9779
+2. Switching to skipgram
+   Accuracy score: 0.9776 F1 score: 0.8052
+   False Positives: 40 False Negatives: 20
+   Confusion matrix:
+    [[2498   40]
+    [  20  124]]
+   AUC score: 0.9825
+
 2/2/2021
 1. Embedding composite model. word2vec embedding with 64 dimensions trained for 15 iterations, 15 epochs of model training
    Embeddings are not trained when the model runs

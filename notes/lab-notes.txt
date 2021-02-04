@@ -13,6 +13,27 @@
     [[2498   40]
     [  20  124]]
    AUC score: 0.9825
+3. Reran the BOW + logistic model
+   Accuracy score: 0.9858 F1 score: 0.8652
+   False Positives: 16 False Negatives: 22
+   Confusion matrix:
+    [[2522   16]
+    [  22  122]]
+   AUC score: 0.9748
+4. Word2vec, skipgram, 64 dimensions
+   Accuracy score: 0.9851 F1 score: 0.8507
+   False Positives: 10 False Negatives: 30
+   Confusion matrix:
+    [[2528   10]
+    [  30  114]]
+   AUC score: 0.9816
+5. Word2vec, skipgram, 32 dimensions, window=10 (previous was default = 5)
+   Accuracy score: 0.9840 F1 score: 0.8436
+   False Positives: 15 False Negatives: 28
+   Confusion matrix:
+    [[2523   15]
+    [  28  116]]
+   AUC score: 0.9862
 
 2/2/2021
 1. Embedding composite model. word2vec embedding with 64 dimensions trained for 15 iterations, 15 epochs of model training

@@ -1,5 +1,6 @@
 ### List of references used in posts
 * [^kaggle1]: [Dataset of real and fake job postings](https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction)
+* [^kaggle2]: [US Jobs on Monster.com](https://www.kaggle.com/PromptCloudHQ/us-jobs-on-monstercom)
 * [^data1]: [Github copy of dataset from Kaggle](https://github.com/r-dube/fakejobs/blob/main/data/fake_job_postings.csv)
 * [^data2]: [Medium dataset: 20% of total](https://github.com/r-dube/fakejobs/blob/main/data/fj_medium.csv)
 * [^data3]: [Small dataset: 3% of total](https://github.com/r-dube/fakejobs/blob/main/data/fj_small.csv)
@@ -20,6 +21,8 @@
 * [^colab12]: [Composite char and token model](https://github.com/r-dube/fakejobs/blob/main/fj_composite.ipynb)
 * [^colab13]: [Composite char and token model with trainable FastText embedding](https://github.com/r-dube/fakejobs/blob/c7fe25acbe28a08949f8a35003539cf7ee5687a2/fj_embedding_composite.ipynb)
 * [^colab13-2]: [Composite char and token model with trainable FastText embedding - updated](https://github.com/r-dube/fakejobs/blob/94eab0adc2e5309d6fdb3a8591abb68a3f16f7d2/fj_embedding_composite.ipynb)
+* [^colab13-3]: [Composite char and token model with trainable FastText embedding - updated](https://github.com/r-dube/fakejobs/blob/2a0d8526029085fdd5ae1927754f19e23b6eb1c6/fj_embedding_composite.ipynb)
+* [^colab14]: [Colab notebook for Word2Vec embeddings](https://github.com/r-dube/fakejobs/blob/2a0d8526029085fdd5ae1927754f19e23b6eb1c6/fj_gensim_word2vec.ipynb)
 * [^glove1]: [Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/)
 * [^trans1]: [Transformers from scratch (video lecture)](https://www.youtube.com/playlist?list=PLIXJ-Sacf8u60G1TwcznBmK6rEL3gmZmV)
 * [^trans2]: [Transformers from scratch (blog post)](http://peterbloem.nl/blog/transformers)
